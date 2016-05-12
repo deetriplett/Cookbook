@@ -1,4 +1,5 @@
 <?php 
+//This is my first name
 $name = "Dawn";
 $location = "Louisville, KY";
 $full_name = "Dawn Monroe";
@@ -33,6 +34,21 @@ $name = "$full_name";
     <section class="main">
       <p>Let's Get Started!</p>
       <p><?php echo "Hello, World!"?></p>
+    </section>
+    <section class ="integers">
+      <pre>
+        <?php 
+          $one = 1;
+          $two = 2;
+          $three = 3;
+          $string_one = "1";
+   
+        ?>
+      </pre>
+      <ul>
+        <li> <?php echo $one; echo $two; echo $three ?></li> 
+        <li><?php echo $string_one ?></li>
+      </ul>
     </section>
   </body>
 </html>
