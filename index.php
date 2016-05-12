@@ -1,18 +1,28 @@
+<?php 
+$name = "Dawn";
+$location = "Louisville, KY";
+$full_name = "Dawn Monroe";
+$name = "$full_name";
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
   	<meta charset=utf-8>
-  	<title>Dawn Monroe's Resume</title>
+  	<title><?php echo $name ?> Resume</title>
   	<link href="css/style.css" rel="stylesheet" />
   </head>
-
+  
   <body>
     <section class="sidebar text-center">
       <div class="avatar">
-        <img src="">
+        <img src="https://placeimg.com/200/200/tech" alt="<?php echo $name ?>">
       </div>
-      <h1>Dawn Monroe</h1>
-      <p>Louisville, KY</p>
+      <h1><?php echo $name ?></h1>
+      <p><?php echo $location ?></p>
       <hr />
       <p>Welcome to my Resume!</p>
       <hr />
