@@ -36,47 +36,19 @@ $name = "$full_name";
       </ul>
     </section>
     <section class="main">
-      <p>Let's Get Started!</p>
-      <p><?php echo "Hello, World!"?></p>
-    </section>
-   <?php 
-    echo TITLE;
-    echo YEAR;
-    echo SALARY;
-    ?>
-    <section class ="integers">
-      <pre>
-        <?php 
-          $one = 1;
-          $two = 2;
-          $three = 3;
-          $string_one = "1"
-        ?>
-      </pre>
-      <ul>
-        <li> <?php echo $one; echo $two; echo $three ?></li> 
-        <li><?php echo $string_one ?></li>
-      </ul>
-      <pre>
-        <?php 
-// (\n) means a new line
-//          $greeting = "Hello, Friends!\n";
-//          $greeting{0} = "J";
-//          $secondary_greeting = "What up?";
-//          echo $greeting;
-//          echo $secondary_greeting;
+     <pre><?php 
+      $array_example = array();
+      $eye_colors = array("blue", "green", "brown");
+      print_r($eye_colors);
 
-//          $bool = TRUE;
-//          var_dump($bool);
-//          $bool = FALSE;
-//          var_dump(($bool) 1);
-//          var_dump(($bool) -1);
-//          var_dump(($bool) "abc");
-//          var_dump(($bool) 0);
-//          var_dump(($bool) 2.2);
-        ?>
-      </pre>
+      echo $eye_colors[0];
+      echo $eye_colors[2];
+
+      $eye_colors[1] = "hazel";
+      echo $eye_colors[1];
+      
+?></pre>
     </section>
-    
+  
   </body>
 </html>
