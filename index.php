@@ -37,15 +37,15 @@ $name = "$full_name";
     </section>
     <section class="main">
      <pre><?php 
-      $array_example = array();
-      $eye_colors = array("blue", "green", "brown");
-      print_r($eye_colors);
 
-      echo $eye_colors[0];
-      echo $eye_colors[2];
-
-      $eye_colors[1] = "hazel";
-      echo $eye_colors[1];
+      $eye_colors = array(
+        "Jackson" => "blue", 
+        "Ruby" => "green",  
+        "Dawn" => "brown",
+        "Chris" => "hazel"
+       );
+      
+       print_r($eye_colors);
       
 ?></pre>
     </section>
