@@ -36,19 +36,38 @@ $name = "$full_name";
       </ul>
     </section>
     <section class="main">
-     <pre><?php 
+     <pre>
+      <?php 
+      $a = 10;
+      $b = 10;
+ 
+      $sum = $a + $b;
+      $diff = $a - $b; 
+      $product = $a * $b;
+      $quotient = $a / $b;
 
-      $eye_colors = array(
-        "Jackson" => "blue", 
-        "Ruby" => "green",  
-        "Dawn" => "brown",
-        "Chris" => "hazel"
-       );
+      //$product = $product + 1;
+      $product++;
+      $product--;
+
+      $c = 20;
+      $d = "10";
+      $e = 25;
+
+      var_dump( $a == $b );//equal
+      var_dump( $a === $d );//indentical
+      var_dump( $a != $b );//not equal
+      var_dump( $a !== $b );//not identical
+      ?>
       
-       print_r($eye_colors);
-      
-?></pre>
+      <ul>
+      <li><?php echo $sum ?> </li>
+      <li><?php echo $diff ?></li>
+      <li><?php echo $product ?></li>
+      <li><?php echo $quotient ?></li>
+      </ul>
+   
+    </pre>
     </section>
-  
   </body>
 </html>
