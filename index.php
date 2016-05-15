@@ -58,7 +58,22 @@ $name = "$full_name";
       var_dump( $a === $d );//indentical
       var_dump( $a != $b );//not equal
       var_dump( $a !== $b );//not identical
-      ?>
+
+      var_dump( $a < $c );//less than
+      var_dump( $a > $b );//greater than
+      var_dump( $a <= $c );//less or equal 
+      var_dump( $a >= $c );//greater or equal
+
+      $a = true;
+      $b = false;
+
+    
+      var_dump( $a and $b ); //TRUE: a and b are true
+      var_dump( $a or $b ); //TRUE: a OR b are true
+      var_dump(!$a); //TRUE: a is NOT true
+  
+
+?>
       
       <ul>
       <li><?php echo $sum ?> </li>
