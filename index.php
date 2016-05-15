@@ -36,47 +36,45 @@ $name = "$full_name";
       </ul>
     </section>
     <section class="main">
-      <p>Let's Get Started!</p>
-      <p><?php echo "Hello, World!"?></p>
-    </section>
-   <?php 
-    echo TITLE;
-    echo YEAR;
-    echo SALARY;
-    ?>
-    <section class ="integers">
-      <pre>
-        <?php 
-          $one = 1;
-          $two = 2;
-          $three = 3;
-          $string_one = "1"
-        ?>
-      </pre>
-      <ul>
-        <li> <?php echo $one; echo $two; echo $three ?></li> 
-        <li><?php echo $string_one ?></li>
-      </ul>
-      <pre>
-        <?php 
-// (\n) means a new line
-//          $greeting = "Hello, Friends!\n";
-//          $greeting{0} = "J";
-//          $secondary_greeting = "What up?";
-//          echo $greeting;
-//          echo $secondary_greeting;
+     <pre><?php 
 
-//          $bool = TRUE;
-//          var_dump($bool);
-//          $bool = FALSE;
-//          var_dump(($bool) 1);
-//          var_dump(($bool) -1);
-//          var_dump(($bool) "abc");
-//          var_dump(($bool) 0);
-//          var_dump(($bool) 2.2);
-        ?>
-      </pre>
+      $eye_colors = array(
+        "Jackson" => "blue", 
+        "Ruby" => "green",  
+        "Dawn" => "brown",
+        "Chris" => "hazel"
+       );
+      
+       print_r($eye_colors);
+      
+?></pre>
     </section>
+    <section class="secondary">
+
     
+    <?php 
+      $a = 10;
+      $b = 10;
+ 
+      $sum = $a + $b;
+      $diff = $a - $b; 
+      $product = $a * $b;
+      $quotient = $a / $b;
+
+      //$product = $product + 1;
+      $product++;
+      $product--;
+     ?>
+
+   
+      
+      <ul>
+      <li><?php echo $sum ?> </li>
+      <li><?php echo $diff ?></li>
+      <li><?php echo $product ?></li>
+      <li><?php echo $quotient ?></li>
+      </ul>
+    </section>
+  
   </body>
 </html>
