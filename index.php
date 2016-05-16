@@ -2,12 +2,28 @@
 define("YEAR", 2016);
 define("TITLE", "Web Developer");
 define("SALARY", 65000);
+define("USE_FULL_NAME", TRUE);
 
 //This is my first name
-$name = "Dawn";
-$location = "Louisville, KY";
+$first_name = "Dawn";
+$last_name = "Monroe";
+$location = "Louisville KY";
 $full_name = "Dawn Monroe";
-$name = "$full_name";
+$role = "Web Developer";
+
+//Conditional IF: run this code if USE FULL NAME is true
+if(USE_FULL_NAME == TRUE){
+  $name = $first_name + ' ' + $last_name;
+  }
+  else{
+    $name = $first_name;
+  };
+
+  if($role == 'Teacher'){
+    $info + "I am CDN";
+    } elseif ( $role == 'Sanders' ) { $info = "i AM A Student at treehouse";} else {$info = "I am just visiting";
+    }
+    
 
 
 
@@ -24,7 +40,7 @@ $name = "$full_name";
   <body>
     <section class="sidebar text-center">
       <div class="avatar">
-        <img src="https://placeimg.com/200/200/tech" alt="<?php echo $name ?>">
+        <img src="placeimg.com/200/200/tech" alt="Place Holder">
       </div>
       <h1><?php echo $name ?></h1>
       <p><?php echo $location ?></p>
@@ -36,53 +52,27 @@ $name = "$full_name";
       </ul>
     </section>
     <section class="main">
-     <pre>
-      <?php 
-      $a = 10;
-      $b = 10;
+    <ul>
  
-      $sum = $a + $b;
-      $diff = $a - $b; 
-      $product = $a * $b;
-      $quotient = $a / $b;
+   <?php 
+   //if/elseif
+   $name = "Mike";
+    if ($name == "Mike") {
+    echo "Hi, I am Mike!";
+    } else { echo "Hello, Stranger!"; }
 
-      //$product = $product + 1;
-      $product++;
-      $product--;
-
-      $c = 20;
-      $d = "10";
-      $e = 25;
-
-      var_dump( $a == $b );//equal
-      var_dump( $a === $d );//indentical
-      var_dump( $a != $b );//not equal
-      var_dump( $a !== $b );//not identical
-
-      var_dump( $a < $c );//less than
-      var_dump( $a > $b );//greater than
-      var_dump( $a <= $c );//less or equal 
-      var_dump( $a >= $c );//greater or equal
-
-      $a = true;
-      $b = false;
-
+    //for loops
+    for( $counter = 1; $counter < 10; $counter++ ){
+    echo "<li>" . $counter . "</li>";
     
-      var_dump( $a and $b ); //TRUE: a and b are true
-      var_dump( $a or $b ); //TRUE: a OR b are true
-      var_dump(!$a); //TRUE: a is NOT true
-  
+    //for each loops
+    
+    
+    }
 
-?>
-      
-      <ul>
-      <li><?php echo $sum ?> </li>
-      <li><?php echo $diff ?></li>
-      <li><?php echo $product ?></li>
-      <li><?php echo $quotient ?></li>
-      </ul>
+  ?>
+ </ul>
    
-    </pre>
     </section>
   </body>
 </html>
