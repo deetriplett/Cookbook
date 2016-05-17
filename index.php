@@ -2,12 +2,29 @@
 define("YEAR", 2016);
 define("TITLE", "Web Developer");
 define("SALARY", 65000);
+define("USE_FULL_NAME", TRUE);
 
 //This is my first name
-$name = "Dawn";
-$location = "Louisville, KY";
+$first_name = "Dawn";
+$last_name = "Monroe";
+$location = "Louisville KY";
 $full_name = "Dawn Monroe";
-$name = "$full_name";
+$role = "Web Developer";
+
+//Conditional IF: run this code if USE FULL NAME is true
+if(USE_FULL_NAME == TRUE){
+  $name = $first_name + ' ' + $last_name;
+  }
+  else{
+    $name = $first_name;
+  };
+
+  if($role == 'Teacher'){
+    $info + "I am CDN";
+    } elseif ( $role == 'Sanders' ) { $info = "i AM A Student at treehouse";} else {$info = "I am just visiting";
+    }
+
+$social_icons = array("twitter", "facebook", "google", "linkedin");
 
 
 
@@ -24,7 +41,7 @@ $name = "$full_name";
   <body>
     <section class="sidebar text-center">
       <div class="avatar">
-        <img src="https://placeimg.com/200/200/tech" alt="<?php echo $name ?>">
+        <img src="placeimg.com/200/200/tech" alt="Place Holder">
       </div>
       <h1><?php echo $name ?></h1>
       <p><?php echo $location ?></p>
@@ -32,49 +49,41 @@ $name = "$full_name";
       <p>Welcome to my Resume!</p>
       <hr />
       <ul class="social">
-        <li><a href="twitter.com/deetriplett"><span class="icon twitter"></span></a></li>
+        <?php 
+          foreach($social_icons as $icon){
+         ?>
+         <li><a href=""><span class="icon <?php echo $icon ?>"></span></a></li>
+    <?php     
+  }?> 
+        
+     
       </ul>
     </section>
     <section class="main">
-     <pre><?php 
-
-      $eye_colors = array(
-        "Jackson" => "blue", 
-        "Ruby" => "green",  
-        "Dawn" => "brown",
-        "Chris" => "hazel"
-       );
-      
-       print_r($eye_colors);
-      
-?></pre>
-    </section>
-    <section class="secondary">
-
-    
-    <?php 
-      $a = 10;
-      $b = 10;
+    <ul>
  
-      $sum = $a + $b;
-      $diff = $a - $b; 
-      $product = $a * $b;
-      $quotient = $a / $b;
+   <?php 
+   //if/elseif
+   $name = "Mike";
+    if ($name == "Mike") {
+    echo "Hi, I am Mike!";
+    } else { echo "Hello, Stranger!"; }
 
-      //$product = $product + 1;
-      $product++;
-      $product--;
-     ?>
-
-   
+    //for loops
+    for( $counter = 1; $counter < 10; $counter++ ){
+    echo "<li>" . $counter . "</li>";  }
+    ?>
       
-      <ul>
-      <li><?php echo $sum ?> </li>
-      <li><?php echo $diff ?></li>
-      <li><?php echo $product ?></li>
-      <li><?php echo $quotient ?></li>
-      </ul>
+    //for each loops
+    
+      <?php
+     $nicknames = array("Ding Dong", "Ruby Gooby", "Chrish Chrish", "Jack Butt");
+      
+     foreach($nicknames as $a_name){
+        echo $a_name . "<\br>"; }  
+    ?>
+    </ul>
+   
     </section>
-  
   </body>
 </html>
