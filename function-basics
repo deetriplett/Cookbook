@@ -1,0 +1,93 @@
+<?php
+
+function hello($name){
+  echo "Hello, $name, how's it going?</br>";
+}
+
+function goodbye($arr){
+  if(is_array($arr)) {
+  foreach($arr as $names) {
+  echo "GoodBye, $names, Cruel World!</br>";
+  }
+ } else {
+  echo "Goodbye my friends!";
+  }
+ }
+
+
+$current_user = 'Plop';
+
+function is_dawn(){
+  global $current_user;
+  if($current_user == 'Dawn'){
+    echo 'It is Dawn!';  
+  } else {
+    echo 'Nope, it is not Dawn.';  
+  }
+}
+
+$names = array(
+  "Ruby",
+  "Chris",
+  "Pepper"
+);
+
+hello("Jackson");
+goodbye($names);
+is_dawn();
+
+function greet($client = "friend",
+                $time_of_day = Null) {
+  if($time_of_day){
+    echo "Hi, $client, good $time_of_day!</br>";
+  } else {
+    echo "Hello, $client!</br>";
+  }
+}
+
+greet("Ruby","Afternoon");
+
+greet("Cathy");
+
+function get_info($nickname, $title = 'friend') {
+  if($title){
+    echo "$nickname has arrived and is here as a $title.</br>";
+  } else { 
+    echo "$nickname has arrived, welcome!</br>"; 
+  }
+  
+}
+
+get_info("Jack");
+
+get_info("Dawn", "Web developer");
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
