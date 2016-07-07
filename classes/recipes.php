@@ -69,14 +69,34 @@ class Recipe
       $this->tags[]= strtolower($tag);
     }
   
-   ///////////////////////////////////////////
+  ///////////////////////////////////////////
   
   public function getTags()
     {
       return $this->tags;
     }
   
-  ///////////////////////////////////////////
+///////////////////////////////////////////
+  public function setYield($yield)
+    {
+     $this->yield = $yield;
+    }
+
+  public function getYield()
+    {
+     return $this->yield;
+    }
+///////////////////////////////////////////
+  public function setSource($source)
+    {
+     $this->source = ucwords($source);
+    }
+
+  public function getSource()
+    {
+     return $this->source;
+    }
+///////////////////////////////////////////////
   public function displayRecipe()
     {
      return $this->title . " by " . $this->source;
