@@ -62,6 +62,19 @@ class Recipe
     {
       return $this->instructions;
     }
+  ///////////////////////////////////////////
+  
+  public function addTag($tag)
+    {
+      $this->tags[]= strtolower($tag);
+    }
+  
+   ///////////////////////////////////////////
+  
+  public function getTags()
+    {
+      return $this->tags;
+    }
   
   ///////////////////////////////////////////
   public function displayRecipe()
@@ -71,15 +84,3 @@ class Recipe
   
 }
 ///////////////////////////////////////////////
-$recipe1 = new Recipe();
-$recipe1->source = "Memaw Fowler";
-$recipe1->setTitle("lemon bars");
-$recipe1->addIngredient("egg", 1);
-
-$recipe2 = new Recipe();
-$recipe2->source = "Betty Crocker";
-$recipe2->setTitle("chocolate mud cake");
-
-echo $recipe1->getTitle();
-echo $recipe1->displayRecipe();
-echo $recipe2->displayRecipe(); 
