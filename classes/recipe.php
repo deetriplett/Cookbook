@@ -38,14 +38,14 @@ class Recipe
       exit("The amount must be a float: " . gettype($amount) . " $amount given");
     }
     
-    if ($measure !=null && !in_array($measure, $this->measurements)) {
+    if ($measure !=null && !in_array(strtolower$measure, $this->measurements)) {
       exit("Please enter a valid measurement! " . implode(", ", $this->measurements));
     }
     
     $this->ingredients[] = array(
       "item" => ucwords($item),
-      "amount" => ucwords($amount),
-      "measure" => ucwords($measure)
+      "amount" => ($amount),
+      "measure" => strtolower($measure)
     );
   }
   public function displayRecipe()
