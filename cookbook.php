@@ -18,6 +18,10 @@ foreeach($recipe1->getIngredients90 as $ing) {
   echo "\n" . $ing["amount"] . " " . $ing["measure"] . " " . $ing["item"];
 }
 
+$recipe1->addInstruction("Whisk eggs");
+$recipe1->addInstruction("Fold in flour");
+
+echo implode("\n", $recipe1->getInstructions());
 
 echo $recipe1->displayRecipe();
 echo $recipe2->displayRecipe(); 
