@@ -9,6 +9,7 @@ class Recipe
   public $tag = array();
   public $source = "Dawn Monroe";
   
+  //////////////////////////////////
   private $measurements = array(
     "tsp",
     "tbsp",
@@ -20,18 +21,18 @@ class Recipe
     "quart",
     "gallon"
   );
-  
+ //////////////////////////////////// 
   public function setTitle($title)
     {
       $this->title = ucwords($title);
     }
-  
+  //////////////////////////////////
   public function getTitle()
     {
      return $this->title; 
     }
   
-  
+////////////////////////////////////  
   public function addIngredient($item, $amount = null, $measure = null)
   {
     if ($amount != null && !is_float($amount) && !is_int($amount)) {
@@ -48,17 +49,32 @@ class Recipe
       "measure" => strtolower($measure)
     );
   }
+  ///////////////////////////////////////////
+  
+  public function addInstruction($string)
+    {
+      $this->instructions[] = $string;
+    }
+  
+  ///////////////////////////////////////////
+  
+  public function getInstructions()
+    {
+      return $this->instructions;
+    }
+  
+  ///////////////////////////////////////////
   public function displayRecipe()
     {
      return $this->title . " by " . $this->source;
     }
   
 }
-
+///////////////////////////////////////////////
 $recipe1 = new Recipe();
 $recipe1->source = "Memaw Fowler";
 $recipe1->setTitle("lemon bars");
-
+$recipe1->addIngredient("egg", 1);
 
 $recipe2 = new Recipe();
 $recipe2->source = "Betty Crocker";
