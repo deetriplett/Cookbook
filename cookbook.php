@@ -25,4 +25,27 @@ $cookbook-> addRecipe($granola);
 $cookbook-> addRecipe($spicy_omelette);
 $cookbook-> addRecipe($scones);
 
+$breakfast = new RecipeCollection("Favorite Breakfasts");
+foreach ($cookbook->filterByTag("breakfst") as $recipe) {
+  $breakfast->addRecipe($recipe);
+}
+
+$week1 = new RecipeCollection("Meal Plan: Week 1");
+$week1->addRecipe($cookbook->filterById(1));
+$week1->addRecipe($cookbook->filterById(3));
+$week1->addRecipe($cookbook->filterById(6));
+$week1->addRecipe($cookbook->filterById(16));
+echo Render::listRecipes($week1->getRecipesTitles());
+echo "\n\n SHOPPING LIST\n\n";
+echo Render::listShopping($week1->getCombinedIngredients());
+
+echo "\n\n BREAKFAST RECIPES\n\n";
+echo Render::listRecipes($breakfast->getRecipesTitles());
+
+echo "\n\n ALL RECIPES\n\n";
 echo Render::listRecipes($cookbook->getRecipesTitles());
+
+
+
+echo "\n\n BELGIAN WAFFLES \n\n";
+echo Render::displayRecipe($cookbook->filterById(2));
