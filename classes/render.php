@@ -2,6 +2,14 @@
 
 class Render
 {
+  
+  public static function listIngredients($ingredients)
+    {
+      $output = "";
+      foreach ($ingredients as $ing) {
+       $output .= $ing["amount"] . " " . $ing["measure"] . " " . $ing["item"];
+      return $output;
+    }
    public static function displayRecipe($recipe)
     {
      $output = "";
@@ -9,9 +17,9 @@ class Render
      $output .= "\n";
      $output .= implode(", ",$recipe->getTags());
      $output .= "\n";
+     $output .= self::listIngredients($recipe->getIngredients());
      $output .= "\n";
-     foreach ($recipe->getIngredients() as $ing) {
-       $output .= $ing["amount"] . " " . $ing["measure"] . " " . $ing["item"];
+     
        $output .= "\n";
      }
      $output .= "\n";
