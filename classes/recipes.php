@@ -7,9 +7,9 @@ class Recipe
   public $instructions = array();
   public $yield;
   public $tag = array();
-  public $source = "Dawn Monroe";
+  public $source = "";
   
-  //////////////////////////////////
+ //////////////////////////////////
   private $measurements = array(
     "tsp",
     "tbsp",
@@ -69,8 +69,6 @@ class Recipe
       $this->tags[]= strtolower($tag);
     }
   
-  ///////////////////////////////////////////
-  
   public function getTags()
     {
       return $this->tags;
@@ -89,7 +87,7 @@ class Recipe
 ///////////////////////////////////////////
   public function setSource($source)
     {
-     $this->source = ucwords($source);
+     $this->source = ($source);
     }
 
   public function getSource()
@@ -97,10 +95,6 @@ class Recipe
      return $this->source;
     }
 ///////////////////////////////////////////////
-  public function displayRecipe()
-    {
-     return $this->title . " by " . $this->source;
-    }
+ 
   
-}
-///////////////////////////////////////////////
+
