@@ -2,7 +2,7 @@
 
 include "classes/recipes.php";
 include "classes/render.php";
-include "classes/recipecolection.php";
+include "classes/recipecollection.php";
 include "inc/allrecipes.php";
 
 $cookbook = new RecipeCollection("Monroe Recipes");
@@ -25,5 +25,4 @@ $cookbook-> addRecipe($granola);
 $cookbook-> addRecipe($spicy_omelette);
 $cookbook-> addRecipe($scones);
 
-echo Render::displayRecipe($belgian_waffles);
-
+echo Render::listRecipes($cookbook->getRecipesTitles());
