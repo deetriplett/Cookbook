@@ -7,7 +7,7 @@ class Recipe
   public $instructions = array();
   public $yield;
   public $tag = array();
-  public $source = "";
+  public $source = "Dawn Monroe";
   
  //////////////////////////////////
   private $measurements = array(
@@ -27,6 +27,11 @@ class Recipe
     $this->setTitle($title);
   }
    
+  public function __toString()
+  {
+    return $this->getTitle();
+  }
+  
   public function setTitle($title)
     {
       if (empty($title)) {
