@@ -5,30 +5,33 @@ class RecipeCollection
   private $title;
   private $recipes = array();
   
+/// Create Title for Recipes ///  
   public function __construct($title = null)
   {
     $this->setTitle($title);
   }
   
-  public function setTitle($title)
-    {
+   public function setTitle($title)
+   {
       if (empty($title)) {
         $this->title = null; 
       } else {
         $this->title = ucwords($title);
+      }
     }
-  }
   
   public function getTitle()
     {
      return $this->title; 
     }
-  
+   
+ /// Add a Recipe to the Array List ///
   public function addRecipe($recipe)
   {
     $this->recipes[] = $recipe;
   }
   
+ /// Retrieve Recipes ///
   public function getRecipes()
   {
     return $this->recipes;
@@ -37,22 +40,11 @@ class RecipeCollection
   public function getRecipeTitles()
   {
     $titles = array();
-    foreach ($this->recipe->getTitle();
-             }
-             return $titles;
+    foreach ($this->recipe->getTitle()) {
+      return $titles;
+    }
   }
-  
-  public function filterByTags($tag)
-             {
-               $taggedRecipes = array();
-               foreach ($this->recipes as $recipe) {
-                 if(in_array(strtolower($tag), $recipe->getTags())) {
-                   $taggedRecipes[] = $recipe;
-                 }
-               }
-               return $taggedRecipes;
-             }
-             
+
 /// GET COMBINED INGREDIENTS ///  
 public function getCombinedIngredients()
     {
@@ -78,4 +70,21 @@ public function getCombinedIngredients()
         return $ingredients;
     }   
   
+///Filter Recipes by Tags ///    
+  public function filterByTags($tag)
+  {
+    $taggedRecipes = array();
+    foreach ($this->recipes as $recipe) {
+      if(in_array(strtolower($tag), $recipe->getTags())) {
+        $taggedRecipes[] = $recipe;
+      }
+    }
+    return $taggedRecipes;
+   }
+             
+/// Filter Recipes by Array Key/ID ///
+public function filterById($id)
+        {
+          return $this->recipes[$id];
+             }
 }//end class RecipeCollection
