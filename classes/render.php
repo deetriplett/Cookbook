@@ -2,6 +2,17 @@
 
 class Render
 {
+  public function __toString()
+  {
+    $output - "The following methods are available for " . __CLASS__ . " objects: \n";
+    $output .= implode("\n", get_class_methods(__CLASS__));
+    return $output;
+    
+    public static function listRecipes($titles)
+    {
+      asort($titles);
+      return implode("\n", $titles);
+    }
   
   public static function listIngredients($ingredients)
     {
