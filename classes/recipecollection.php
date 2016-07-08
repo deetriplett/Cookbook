@@ -24,5 +24,15 @@ class RecipeCollection
      return $this->title; 
     }
   
+  public function addRecipe($recipe)
+  {
+    $this->recipes[] = $recipe;
+  }
   
-}
+  public function getRecipes()
+  {
+    return $this->recipes;
+  }
+  
+  
+}//end class RecipeCollection
