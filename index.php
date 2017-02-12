@@ -12,12 +12,12 @@ $full_name = "Dawn Monroe";
 $role = "Web Developer";
 
 //Conditional IF: run this code if USE FULL NAME is true
-if(USE_FULL_NAME == TRUE){
-  $name = $first_name + ' ' + $last_name;
-  }
-  else{
-    $name = $first_name;
-  };
+// if(USE_FULL_NAME == TRUE){
+//   $name = $first_name + ' ' + $last_name;
+//   }
+//   else{
+//     $name = $first_name;
+//   };
 
   if($role == 'Teacher'){
     $info + "I am CDN";
