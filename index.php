@@ -5,11 +5,11 @@ define("SALARY", 65000);
 define("USE_FULL_NAME", TRUE);
 
 //This is my first name
-// $first_name = "Dawn";
-// $last_name = "Monroe";
-// $location = "Louisville KY";
-// $full_name = "Dawn Monroe";
-// $role = "Web Developer";
+$first_name = "Dawn";
+$last_name = "Monroe";
+$location = "Louisville KY";
+$full_name = "Dawn Monroe";
+$role = "Web Developer";
 
 //Conditional IF: run this code if USE FULL NAME is true
 if(USE_FULL_NAME == TRUE){
