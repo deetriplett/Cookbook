@@ -31,7 +31,6 @@ $val = calc(5,3);
 
 print_r($val);
 ////////////////////////////////
-
 function answer() {
   return 42;
 }//end answer func
@@ -42,9 +41,7 @@ function subtract ($a, $b) {
 
 $func = "subtract";
 
-
 echo $func(3, 4);
-
 /////////////////////////////////
 
 $person = "Mike";
