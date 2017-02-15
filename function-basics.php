@@ -6,7 +6,7 @@ function hello($name) {
   } else {
     return "Hello Stranger!</br>";
   }
- }//End hello() function
+ } //End hello() function
 
 $greeting = hello("Chris");
 
