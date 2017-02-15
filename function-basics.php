@@ -11,7 +11,6 @@ $greeting = hello("Chris");
 
 echo $greeting;
 /////////////////////////////////
-
 function add_up($a, $b) {
   return $a + $b;
 }//end add_up function
@@ -19,7 +18,6 @@ function add_up($a, $b) {
 $value = add_up(2, 4);
 echo $value;
 ////////////////////////////////
-
 function calc($a, $b) {
   $arr = array(
     $a,
@@ -32,7 +30,6 @@ function calc($a, $b) {
 $val = calc(5,3);
 
 print_r($val);
-
 ////////////////////////////////
 
 function answer() {
