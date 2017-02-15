@@ -33,17 +33,16 @@ print_r($val);
 ////////////////////////////////
 function answer() {
   return 42;
-}//end answer func
+} //end answer func
 
 function subtract ($a, $b) {
   return $a - $b;
-}// end subtract function
+} // end subtract function
 
 $func = "subtract";
 
 echo $func(3, 4);
 /////////////////////////////////
-
 $person = "Mike";
 
 $greet = function() use($person){ //anonymous function ends with ; !!
@@ -52,7 +51,5 @@ $greet = function() use($person){ //anonymous function ends with ; !!
 };
 
 $greet();
-
 /////////////////////////////////
-
 ?>
