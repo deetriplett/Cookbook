@@ -12,15 +12,12 @@ $greeting = hello("Chris");
 echo $greeting;
 /////////////////////////////////
 
-
 function add_up($a, $b) {
   return $a + $b;
 }//end add_up function
 
 $value = add_up(2, 4);
 echo $value;
-
-
 ////////////////////////////////
 
 function calc($a, $b) {
